@@ -14,7 +14,7 @@ class CodesController < ApplicationController
 
   # GET /codes/new
   def new
-    @code = Code.new
+    # @code = Code.new
   end
 
   # GET /codes/1/edit
