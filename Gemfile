@@ -68,3 +68,6 @@ gem 'mini_racer'
 
 # install devise gem for login
 gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
