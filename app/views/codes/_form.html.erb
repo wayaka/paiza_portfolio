@@ -44,6 +44,11 @@
         <br/>
 
         <button id="run_button" class="btn btn-primary">実行（Ctrl-Enter）</button>
+        <% if user_signed_in? %>
+            <li class="nav-item active">
+                <%= link_to('コード新規登録', destroy_user_session_path, method: :delete) %>
+            </li>
+        <% else %>
         <br/>
         <hr/>
 
