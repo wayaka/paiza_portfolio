@@ -1,9 +1,11 @@
 class CodesController < ApplicationController
+  protect_from_forgery
   before_action :set_code, only: [:show, :edit, :update, :destroy]
 
   # GET /codes
   # GET /codes.json
   def index
+    puts params
     @codes = Code.all
   end
 
@@ -24,13 +26,16 @@ class CodesController < ApplicationController
   # POST /codes
   # POST /codes.json
   def create
-    @code = Code.new(code_params)
+    @code = Code.new(source: params[:source])
+    # @code = Code.new(code_params)
 
     respond_to do |format|
-      if @code.save
+      if @code.save!
+         flash[:notice] = "OK"
         format.html { redirect_to @code, notice: 'Code was successfully created.' }
         format.json { render :show, status: :created, location: @code }
       else
+        flash[:notice] = "NG"
         format.html { render :new }
         format.json { render json: @code.errors, status: :unprocessable_entity }
       end

@@ -35,3 +35,25 @@ setEditorLanguage("ruby");
 $("#language").on("change", function(event){
     setEditorLanguage(this.value);
 });
+
+$( '#new_code' ).click( function() {
+    // alert("test");
+    var language = $("#language").val();
+    var source_code = aceEditor.getValue();
+    $.ajax( {
+          type: 'POST',
+          beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+          url: '/codes',
+          data: { 
+            'language': language,
+            'source': source_code,
+         },
+        success: function( data ) {
+            // console.log( data );
+        }
+        , error: function( data ) {
+            console.log( data );
+        }
+    } );
+    return false; // submitしたらajaxを待つことなく画面遷移するため。
+} );
