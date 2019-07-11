@@ -8,6 +8,7 @@
       <% if user_signed_in? %>
         <li class="nav-item active">
           <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+          <%= link_to('コード一覧', codes_path) %>
         </li>
       <% else %>
         <li class="nav-item active">
