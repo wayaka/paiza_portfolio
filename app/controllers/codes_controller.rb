@@ -26,13 +26,15 @@ class CodesController < ApplicationController
   # POST /codes
   # POST /codes.json
   def create
-    @code = Code.new(source: params[:source])
+    @language = Language.find_by(code: params[:language])
+    @code = current_user.codes.build(source: params[:source], language_id: @language.id)
+
     # @code = Code.new(code_params)
 
     respond_to do |format|
       if @code.save!
          flash[:notice] = "OK"
-        format.html { redirect_to @code, notice: 'Code was successfully created.' }
+        format.html { redirect_to edit_code_path(@code), notice: 'Code was successfully created.' }
         format.json { render :show, status: :created, location: @code }
       else
         flash[:notice] = "NG"
