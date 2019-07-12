@@ -5,7 +5,6 @@ class CodesController < ApplicationController
   # GET /codes
   # GET /codes.json
   def index
-    puts params
     @codes = Code.all
   end
 
@@ -21,6 +20,7 @@ class CodesController < ApplicationController
 
   # GET /codes/1/edit
   def edit
+    
   end
 
   # POST /codes
