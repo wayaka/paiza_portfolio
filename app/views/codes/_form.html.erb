@@ -47,6 +47,9 @@
         <% if user_signed_in? %>
             <li class="nav-item active">
                 <button id="new_code" class="btn btn-primary">新規登録</button>
+                <% if request.url.include?("edit") %>
+                  <button id="update_code" class="btn btn-primary">更新して保存</button>
+                <% end %>
             </li>
         <% end %>
         <br/>
