@@ -36,6 +36,12 @@ $("#language").on("change", function(event){
     setEditorLanguage(this.value);
 });
 
+//when update code
+if(location.href.indexOf('edit') ){
+    document.getElementById('language').value = gon.language;
+    aceEditor.setValue(gon.code, -1);
+}
+
 $( '#new_code' ).click( function() {
     // alert("test");
     var language = $("#language").val();
@@ -57,3 +63,4 @@ $( '#new_code' ).click( function() {
     } );
     return false; // submitしたらajaxを待つことなく画面遷移するため。
 } );
+

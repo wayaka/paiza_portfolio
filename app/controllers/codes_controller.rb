@@ -20,7 +20,9 @@ class CodesController < ApplicationController
 
   # GET /codes/1/edit
   def edit
-    
+    @code = Code.find(params[:id])
+    gon.language = @code.language.code
+    gon.code = @code.source
   end
 
   # POST /codes

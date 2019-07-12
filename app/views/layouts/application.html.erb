@@ -10,6 +10,7 @@
   </head>
 
   <body>
+    <%= Gon::Base.render_data %>
     <%= render 'layouts/navbar' %>
     <%= yield %>
     <% unless user_signed_in? %>
