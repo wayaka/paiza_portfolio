@@ -36,14 +36,7 @@ $("#language").on("change", function(event){
     setEditorLanguage(this.value);
 });
 
-//when update code
-if(location.href.indexOf('edit') ){
-    document.getElementById('language').value = gon.language;
-    aceEditor.setValue(gon.code, -1);
-}
-
-$( '#new_code' ).click( function() {
-    // alert("test");
+$('#new_code').click(function() {
     var language = $("#language").val();
     var source_code = aceEditor.getValue();
     $.ajax( {
@@ -64,3 +57,33 @@ $( '#new_code' ).click( function() {
     return false; // submitしたらajaxを待つことなく画面遷移するため。
 } );
 
+$( '#update_code' ).click( function() {
+    // alert("test");
+    var language = $("#language").val();
+    var source_code = aceEditor.getValue();
+    
+    
+    alert(params);
+    $.ajax( {
+          type: 'POST',
+          beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+          url: '/codes/' + param,
+          data: { 
+            'language': language,
+            'source': source_code,
+         },
+        success: function( data ) {
+            // console.log( data );
+        }
+        , error: function( data ) {
+            console.log( data );
+        }
+    } );
+    return false; // submitしたらajaxを待つことなく画面遷移するため。
+} );
+
+// when update code
+if(location.href.indexOf('edit') !== -1){
+    document.getElementById('language').value = gon.language;
+    aceEditor.setValue(gon.code, -1);
+}
