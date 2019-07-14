@@ -57,17 +57,17 @@ $('#new_code').click(function() {
     return false; // submitしたらajaxを待つことなく画面遷移するため。
 } );
 
-$( '#update_code' ).click( function() {
-    // alert("test");
+$('#update_code').click(function() {
+    var url = location.href;
+    var param = url.match(/codes\/\d+/)[0].match(/\d+/)[0];
     var language = $("#language").val();
     var source_code = aceEditor.getValue();
     
     
-    alert(params);
     $.ajax( {
           type: 'POST',
           beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
-          url: '/codes/' + param,
+          url: '/codes/update/' + param,
           data: { 
             'language': language,
             'source': source_code,

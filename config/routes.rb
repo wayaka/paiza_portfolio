@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :codes, except: :show
 
+  post '/codes/update/:id', to: 'codes#update_code', as: 'code_update'
+
   devise_for :users, :controllers => {
   :registrations => 'users/registrations',
   :sessions => 'users/sessions'   

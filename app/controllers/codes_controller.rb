@@ -48,10 +48,27 @@ class CodesController < ApplicationController
 
   # PATCH/PUT /codes/1
   # PATCH/PUT /codes/1.json
-  def update
+  # def update
+  #   puts "update";
+  #   respond_to do |format|
+  #     if @code.update(code_params)
+  #       format.html { redirect_to @code, notice: 'Code was successfully updated.' }
+  #       format.json { render :show, status: :ok, location: @code }
+  #     else
+  #       format.html { render :edit }
+  #       format.json { render json: @code.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
+
+  def update_code
+    @language = Language.find_by(code: params[:language])
+    @code = Code.find(params[:id])
+    @code.source = params[:source]
+    @code.language = @language
     respond_to do |format|
-      if @code.update(code_params)
-        format.html { redirect_to @code, notice: 'Code was successfully updated.' }
+      if @code.save!
+        format.html { redirect_to edit_code_path(@code), notice: 'Code was successfully updated.' }
         format.json { render :show, status: :ok, location: @code }
       else
         format.html { render :edit }
