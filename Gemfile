@@ -72,4 +72,8 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 
+# use JavaScript and ruby association
 gem 'gon'
+
+# use env file
+gem 'dotenv-rails'
