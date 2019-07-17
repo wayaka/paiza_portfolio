@@ -1,37 +1,20 @@
 class CodesController < ApplicationController
   protect_from_forgery
-  before_action :set_code, only: [:show, :edit, :update, :destroy]
+  before_action :set_code, only: [:edit, :update_code, :destroy]
+  before_action :authenticate_user!, [:index, :create, :update_code, :destroy]
 
-  # GET /codes
-  # GET /codes.json
   def index
     @codes = Code.all
   end
 
-  # GET /codes/1
-  # GET /codes/1.json
-  def show
-  end
-
-  # GET /codes/new
-  def new
-    # @code = Code.new
-  end
-
-  # GET /codes/1/edit
   def edit
-    @code = Code.find(params[:id])
     gon.language = @code.language.code
     gon.code = @code.source
   end
 
-  # POST /codes
-  # POST /codes.json
   def create
     @language = Language.find_by(code: params[:language])
     @code = current_user.codes.build(source: params[:source], language_id: @language.id)
-
-    # @code = Code.new(code_params)
 
     respond_to do |format|
       if @code.save!
@@ -46,26 +29,11 @@ class CodesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /codes/1
-  # PATCH/PUT /codes/1.json
-  # def update
-  #   puts "update";
-  #   respond_to do |format|
-  #     if @code.update(code_params)
-  #       format.html { redirect_to @code, notice: 'Code was successfully updated.' }
-  #       format.json { render :show, status: :ok, location: @code }
-  #     else
-  #       format.html { render :edit }
-  #       format.json { render json: @code.errors, status: :unprocessable_entity }
-  #     end
-  #   end
-  # end
-
   def update_code
     @language = Language.find_by(code: params[:language])
-    @code = Code.find(params[:id])
     @code.source = params[:source]
     @code.language = @language
+
     respond_to do |format|
       if @code.save!
         format.html { redirect_to edit_code_path(@code), notice: 'Code was successfully updated.' }
@@ -77,8 +45,6 @@ class CodesController < ApplicationController
     end
   end
 
-  # DELETE /codes/1
-  # DELETE /codes/1.json
   def destroy
     @code.destroy
     respond_to do |format|
@@ -97,4 +63,5 @@ class CodesController < ApplicationController
     def code_params
       params.fetch(:code, {})
     end
+    
 end
