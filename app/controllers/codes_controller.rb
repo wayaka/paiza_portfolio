@@ -1,7 +1,7 @@
 class CodesController < ApplicationController
   protect_from_forgery
   before_action :set_code, only: [:edit, :update_code, :destroy]
-  before_action :authenticate_user!, [:index, :create, :update_code, :destroy]
+  # before_action :authenticate_user!, [:index, :create, :update_code, :destroy]
 
   def index
     @codes = Code.all
@@ -10,6 +10,10 @@ class CodesController < ApplicationController
   def edit
     gon.language = @code.language.code
     gon.code = @code.source
+  end
+
+  def new
+
   end
 
   def create

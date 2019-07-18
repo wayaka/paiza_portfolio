@@ -10,7 +10,6 @@
   </head>
 
   <body>
-    
 <script>
   window.fbAsyncInit = function() {
     FB.init({
@@ -39,13 +38,16 @@ function checkLoginState() {
   });
 }
 </script>
-
+  <div class="container">
     <%= Gon::Base.render_data %>
+    <header>
     <%= render 'layouts/navbar' %>
+    </header>
     <%= yield %>
     <% unless user_signed_in? %>
       <%= render partial: 'users/registrations/new' %>
       <%= render partial: 'users/sessions/new' %>
     <% end %>
+    </div>
   </body>
 </html>
