@@ -70,6 +70,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem 'mini_racer'
+gem 'bootstrap-social-rails'
+gem 'font-awesome-sass'
 
 # install devise gem for login
 gem 'devise'
