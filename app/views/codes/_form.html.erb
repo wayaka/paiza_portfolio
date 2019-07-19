@@ -1,71 +1,55 @@
-<!--
- <%#= form_with(model: code, local: true) do |form| %>
-   <%# if code.errors.any? %>
-     <div id="error_explanation">
-       <h2><%#= pluralize(code.errors.count, "error") %> prohibited this code from being saved:</h2>
-
-       <ul>
-       <%# code.errors.full_messages.each do |message| %>
-         <li><%#= message %></li>
-       <%# end %>
-       </ul>
-     </div>
-   <%# end %>
-
-   <div class="actions">
-     <%#= form.submit %>
-   </div>
- <%# end %>
- -->
 <html>
     <head>
         <meta charset="UTF-8">
-        <%#= javascript_include_tag('app.js') %>
-        <title>簡易オンラインジャッジシステム</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ace.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ext-language_tools.js"></script>
     </head>
     <body>
-        <h1>コードをDockerコンテナで実行!</h1>
-        言語：
-        <select id="language">
+        <p class="mb-0">言語：</p>
+      <div class="container">
+        <div class="row">
+        <select id="language" class="custom-select col-md-2">
             <option value="ruby">Ruby</option>
             <option value="python">Python</option>
             <option value="c_cpp">C</option>
         </select>
         <br/>
+        </div>
+      </div>
 
-        ソースコード：<br/>
-        <div id="source_code" style="width: 70%; height: 200px; resize: vertical;"></div>
+        <p class="mb-0 mt-3">ソースコード：</p>
+        <div id="source_code" style="width: 100%; height: 200px; resize: vertical;"></div>
 
-        標準入力：<br/>
+        <p class="mt-3 mb-0">標準入力：</p>
         <textarea id="input" style="width: 100%; height: 50px; resize: vertical;"></textarea>
         <br/>
 
-        <button id="run_button" class="btn btn-primary">実行（Ctrl-Enter）</button>
-        <% if user_signed_in? %>
-            <li class="nav-item active">
-                <button id="new_code" class="btn btn-primary">新規登録</button>
+<ul class="ist-inline">
+        <li class="list-inline-item"><button id="run_button" class="btn btn-primary rounded-pill mt-3 btn-lg">実行（Ctrl-Enter）</button></li>
+        
+            <li class="list-inline-item"><button id="new_code" class="btn btn-outline-primary d-block d-md-inline-block rounded-pill mt-3 btn-lg">コードを新規登録</button></li>
                 <% if request.url.include?("edit") %>
-                  <button id="update_code" class="btn btn-primary">更新して保存</button>
+                  <li class="list-inline-item"><button id="update_code" class="btn btn-outline-primary d-block d-md-inline-block rounded-pill mt-3 btn-lg">更新して保存</button></li>
                 <% end %>
-            </li>
-        <% end %>
-        <br/>
-        <br/>
+            </ul>
+        
 
+<hr>
         標準出力：
-        <pre><div id="stdout" style="background: lightgray"></div></pre>
+        <textarea id="stdout" style="width: 100%; height: 50px; resize: vertical;" class="border border-success"></textarea>
+        <!-- <pre class=""><div id="stdout" class="border border-success"></div></pre> -->
 
         標準エラー出力：
-        <pre><div id="stderr" style="background: lightgray"></div></pre>
+        <pre><div id="stderr" class="bg-danger"></div></pre>
 
         実行時間：
-        <div id="time" style="background: lightgray"></div>
+        <div id="time" class="bg-secondary mb-3"></div>
 
+<!--
         終了コード：
         <div id="exit_code" style="background: lightgray"></div>
+    -->  
     </body>
 </html>
 <%= javascript_include_tag "ui.js" %>
