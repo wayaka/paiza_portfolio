@@ -1,6 +1,7 @@
 class CodesController < ApplicationController
   protect_from_forgery
   before_action :set_code, only: [:edit, :update_code, :destroy]
+  before_action :set_question
   # before_action :authenticate_user!, [:index, :create, :update_code, :destroy]
 
   def index
@@ -69,6 +70,10 @@ class CodesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def code_params
       params.fetch(:code, {})
+    end
+
+    def set_question
+      @question = Question.where( 'id >= ?', rand(Question.first.id..Question.last.id) ).first
     end
     
 end

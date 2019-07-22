@@ -22,3 +22,16 @@ Language.create!(
    }
   ]
 )
+
+Question.create!(
+  [
+    {
+     content: '『こんにちは』と出力してみよう！',
+     search_word: '[言語] 出力'
+   },
+   {
+     content: '『ありがとう』を10回出力してみよう！',
+     search_word: '[言語]　for',
+   }
+  ]
+)

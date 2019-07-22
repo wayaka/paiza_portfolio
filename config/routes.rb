@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   :omniauth_callbacks => 'users/omniauth_callbacks'
   } 
 
+  get '/question', to: 'codes#select_question', as: 'select_question'
+
 end
