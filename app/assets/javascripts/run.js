@@ -27,9 +27,8 @@ function runCode(){
                     setTimeout(getResult, 1000);
                     return;
                 }
-                console.log("result:", result);
                 $("#stdout").text(result.stdout);
-                $("#stderr").text(result, stderr);
+                $("#stderr").text(result.stderr);
                 $("#time").text(result.time);
                 $("#exit_code").text(result.exit_code);
                 $("#run_button").text("実行（Ctrl-Enter）").prop("disabled", false);
