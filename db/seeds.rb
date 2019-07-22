@@ -38,7 +38,7 @@ Question.create!(
      search_word: '[言語名]　掛け算',
    },
    {
-     content: 'もし年齢が18歳だったら、『未成年』と出力してみよう！',
+     content: '『もし年齢が18歳だったら、"未成年"』と出力してみよう！',
      search_word: '[言語名]　if文',
    },
    {
