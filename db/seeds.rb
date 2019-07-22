@@ -26,12 +26,24 @@ Language.create!(
 Question.create!(
   [
     {
-     content: '『こんにちは』と出力してみよう！',
-     search_word: '[言語] 出力'
+     content: '『Hello World』と出力してみよう！',
+     search_word: '[言語名] helloworld'
    },
    {
-     content: '『ありがとう』を10回出力してみよう！',
-     search_word: '[言語]　for',
-   }
+     content: '『thank you』を10回出力してみよう！',
+     search_word: '[言語名]　繰り返し',
+   },
+   {
+     content: '2×8を出力してみよう！',
+     search_word: '[言語名]　掛け算',
+   },
+   {
+     content: 'もし年齢が18歳だったら、『未成年』と出力してみよう！',
+     search_word: '[言語名]　if文',
+   },
+   {
+     content: '『りんご、みかん、さくらんぼ』の配列を作り、『さくらんぼ』を出力してみよう！',
+     search_word: '[言語名]　配列',
+   },
   ]
 )
