@@ -83,7 +83,7 @@
 1. 削除したいコードのゴミ箱アイコンをクリックする
 1. 本当に削除して良いか確認画面が表示される
 1. 削除して良ければ[OK]をクリックする
-
+<img width="1185" alt="削除" src="https://user-images.githubusercontent.com/45886640/61796094-b4cd7280-ae5f-11e9-94cd-9f4985dcac9d.png">
 ---
 
 ### ログアウト
