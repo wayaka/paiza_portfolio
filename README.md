@@ -34,6 +34,21 @@
 
 * MySQL 8.0.16
 
+### Environment
+
+* 開発環境：docker,docker-compose
+* 本番環境：AWS EC2(ECR、RDS、Route53を利用)
+* デプロイ：AWS ECS
+
+## Development Terminal
+
+* Mac OS
+
+## Version control tool
+
+* Git
+* GitHub
+
 ## How To Use
 ### コード実行
 1. トップページの[Let's Try!]をクリック
