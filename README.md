@@ -41,7 +41,7 @@
 1. コードをエディタに記述
 1. 実行（Ctrl+Enter）をクリック
 1. 実行結果が標準出力・標準エラー出力・実行時間（秒）に出力される
-
+<img width="1128" alt="実行結果" src="https://user-images.githubusercontent.com/45886640/61796601-aa5fa880-ae60-11e9-9c6c-65079c1e0a8c.png">
 ---
 
 ### ユーザー登録
