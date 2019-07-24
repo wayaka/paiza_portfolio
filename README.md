@@ -42,6 +42,7 @@
 1. 実行（Ctrl+Enter）をクリック
 1. 実行結果が標準出力・標準エラー出力・実行時間（秒）に出力される
 <img width="1128" alt="実行結果" src="https://user-images.githubusercontent.com/45886640/61796601-aa5fa880-ae60-11e9-9c6c-65079c1e0a8c.png">
+
 ---
 
 ### ユーザー登録
@@ -49,6 +50,7 @@
 1. ユーザー登録のモーダル画面に、登録内容を入力する（Facebook・Twitterでのソーシャルサインオンも可能）
 1. 新規登録が完了し、コードの保存が可能となる
 <img width="516" alt="新規登録" src="https://user-images.githubusercontent.com/45886640/61796280-070e9380-ae60-11e9-9bd4-1a0ceb90f7f7.png">
+
 ---
 
 ### ログイン
@@ -57,6 +59,7 @@
 1. ログインのモーダル画面に、ユーザー情報を入力する（Facebook・Twitterでのソーシャルサインオンも可能）
 1. ログインが完了し、コードの保存が可能となる
 <img width="519" alt="ログイン" src="https://user-images.githubusercontent.com/45886640/61796368-358c6e80-ae60-11e9-982b-8424de34ea2d.png">
+
 ---
 
 ### コードの保存
@@ -84,10 +87,12 @@
 1. 本当に削除して良いか確認画面が表示される
 1. 削除して良ければ[OK]をクリックする
 <img width="1185" alt="削除" src="https://user-images.githubusercontent.com/45886640/61796094-b4cd7280-ae5f-11e9-94cd-9f4985dcac9d.png">
+
 ---
 
 ### ログアウト
 ※事前にユーザーログインしていることが前提
 1. [Logout]をクリックする
+<img width="1070" alt="ログアウト" src="https://user-images.githubusercontent.com/45886640/61796716-f14d9e00-ae60-11e9-884d-ad8a87c9f3d4.png">
 
 ---
