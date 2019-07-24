@@ -48,7 +48,7 @@
 1. トップページの[Sign Up]をクリック
 1. ユーザー登録のモーダル画面に、登録内容を入力する（Facebook・Twitterでのソーシャルサインオンも可能）
 1. 新規登録が完了し、コードの保存が可能となる
-
+<img width="516" alt="新規登録" src="https://user-images.githubusercontent.com/45886640/61796280-070e9380-ae60-11e9-9bd4-1a0ceb90f7f7.png">
 ---
 
 ### ログイン
