@@ -36,14 +36,15 @@
         <textarea id="input" style="width: 100%; height: 50px; resize: vertical;"></textarea>
         <br/>
 
-<ul class="ist-inline">
+<ul class="list-inline">
         <li class="list-inline-item"><button id="run_button" class="btn btn-primary rounded-pill mt-3 btn-lg">実行（Ctrl-Enter）</button></li>
-        
+        <% if user_signed_in?%>
             <li class="list-inline-item"><button id="new_code" class="btn btn-outline-primary d-block d-md-inline-block rounded-pill mt-3 btn-lg">コードを新規登録</button></li>
                 <% if request.url.include?("edit") %>
                   <li class="list-inline-item"><button id="update_code" class="btn btn-outline-primary d-block d-md-inline-block rounded-pill mt-3 btn-lg">更新して保存</button></li>
                 <% end %>
             </ul>
+            <% end %>
         
 
 <hr>

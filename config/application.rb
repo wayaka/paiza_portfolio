@@ -27,5 +27,9 @@ module AppName
                        request_specs: false
       g.fixture_replacement :factory_bot, dir: "spec/factories"
     end
+
+    config.to_prepare do
+      DeviseController.respond_to :html, :json, :js
+    end
   end
 end

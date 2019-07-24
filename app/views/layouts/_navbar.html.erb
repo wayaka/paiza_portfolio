@@ -14,10 +14,10 @@
           <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "btn btn-outline-secondary d-block d-md-inline-block mb-2 mb-md-0 rounded-pill btn-lg mx-4" %>
         </li>
       <% else %>
-        <li class="nav-item active">
+        <li class="nav-item active mb-sm-2 mb-lg-0">
           <a class="btn btn-outline-secondary d-block d-md-inline-block mb-2 mb-md-0 rounded-pill btn-lg mx-3" data-toggle="modal" data-target="#signUpModal">Sign Up</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item mx-auto">
           <a class="btn btn-outline-secondary d-block d-md-inline-block mb-2 mb-md-0 rounded-pill btn-lg mx-3" data-toggle="modal" data-target="#logInModal">Log In</a>
         </li>
       <% end %>
