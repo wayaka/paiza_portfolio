@@ -1,24 +1,91 @@
 # README
+## RunCode
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+プログラミングをオンラインで実行できるアプリケーションです。
 
-Things you may want to cover:
+環境構築が不要なので、手軽にプログラミングをすることができます。
 
-* Ruby version
+星マークをクリックすることで、初学者向けの問題がランダムで出題されます。
 
-* System dependencies
+ユーザー登録をすることで、記述したコードを保存したり更新することもできます。
 
-* Configuration
+<img width="1171" alt="RunCode" src="https://user-images.githubusercontent.com/45886640/61791885-328c8080-ae56-11e9-9829-69e4143d3834.png">
 
-* Database creation
+## Specification
 
-* Database initialization
 
-* How to run the test suite
+## Version
 
-* Services (job queues, cache servers, search engines, etc.)
+* Ruby 2.5.3
 
-* Deployment instructions
+### FW
 
-* ...
+* Ruby on Rails 5.2.3
+
+* jQuery 2.2.0
+
+* Bootstrap 4
+
+### Test FW
+
+* RSpec 3.8
+
+### Database
+
+* MySQL 8.0.16
+
+## How To Use
+### コード実行
+1. トップページの[Let's Try!]をクリック
+1. プログラミング言語を選択
+1. コードをエディタに記述
+1. 実行（Ctrl+Enter）をクリック
+1. 実行結果が標準出力・標準エラー出力・実行時間（秒）に出力される
+
+---
+
+### ユーザー登録
+1. トップページの[Sign Up]をクリック
+1. ユーザー登録のモーダル画面に、登録内容を入力する（Facebook・Twitterでのソーシャルサインオンも可能）
+1. 新規登録が完了し、コードの保存が可能となる
+
+---
+
+### ログイン
+※ユーザー登録が事前にされていることが前提
+1. トップページの[Login]をクリック
+1. ログインのモーダル画面に、ユーザー情報を入力する（Facebook・Twitterでのソーシャルサインオンも可能）
+1. ログインが完了し、コードの保存が可能となる
+
+---
+
+### コードの保存
+※事前にユーザーログインしていることが前提
+1. エディタにコードを記述し、[コードを新規登録]をクリック
+1. [コード一覧]をクリックすると、新規登録したコードが表示される
+
+---
+
+### コードの更新
+※事前にユーザーログインしていることが前提
+1. [コード一覧]をクリック
+1. 編集したいコードの編集アイコンをクリックする
+1. 該当のコードがエディタに表示される
+1. [更新して保存]をクリックすると、コードが更新される
+
+---
+
+### コードの削除
+※事前にユーザーログインしていることが前提
+1. [コード一覧]をクリック
+1. 削除したいコードのゴミ箱アイコンをクリックする
+1. 本当に削除して良いか確認画面が表示される
+1. 削除して良ければ[OK]をクリックする
+
+---
+
+### ログアウト
+※事前にユーザーログインしていることが前提
+1. [Logout]をクリックする
+
+---
