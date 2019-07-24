@@ -56,7 +56,7 @@
 1. トップページの[Login]をクリック
 1. ログインのモーダル画面に、ユーザー情報を入力する（Facebook・Twitterでのソーシャルサインオンも可能）
 1. ログインが完了し、コードの保存が可能となる
-
+<img width="519" alt="ログイン" src="https://user-images.githubusercontent.com/45886640/61796368-358c6e80-ae60-11e9-982b-8424de34ea2d.png">
 ---
 
 ### コードの保存
