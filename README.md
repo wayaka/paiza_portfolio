@@ -13,6 +13,13 @@
 
 ## Specification
 
+* 要件定義書
+
+ https://drive.google.com/open?id=1jj1fiNK0vXrES93WUVm6gpZ94bl2TuDb8Nsswfs_0O4
+
+* テーブル定義書
+
+ https://drive.google.com/open?id=19fAOxtH7NL9xO2wN5FaWKcCw7V9eh-emoLCrT98fNYY
 
 ## Version
 
