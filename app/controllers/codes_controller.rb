@@ -27,7 +27,7 @@ class CodesController < ApplicationController
     respond_to do |format|
       if @code.save!
          flash[:notice] = "OK"
-        format.html { redirect_to edit_code_path(@code), notice: 'Code was successfully created.' }
+        format.html { redirect_to edit_code_path(@code), notice: 'コードが新規登録されました。' }
         format.json { render :show, status: :created, location: @code }
       else
         flash[:notice] = "NG"
@@ -44,7 +44,7 @@ class CodesController < ApplicationController
 
     respond_to do |format|
       if @code.save!
-        format.html { redirect_to edit_code_path(@code), notice: 'Code was successfully updated.' }
+        format.html { redirect_to edit_code_path(@code), notice: 'コードが更新されました。' }
         format.json { render :show, status: :ok, location: @code }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class CodesController < ApplicationController
   def destroy
     @code.destroy
     respond_to do |format|
-      format.html { redirect_to codes_url, notice: 'Code was successfully destroyed.' }
+      format.html { redirect_to codes_url, notice: 'コードが削除されました。' }
       format.json { head :no_content }
     end
   end

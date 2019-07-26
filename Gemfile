@@ -84,3 +84,8 @@ gem 'gon'
 
 # use env file
 gem 'dotenv-rails'
+
+#localization
+gem 'devise-i18n'
+gem 'devise-i18n-views'
+gem 'rails-i18n', '~> 5.1'
