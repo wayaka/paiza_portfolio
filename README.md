@@ -20,6 +20,10 @@
 * テーブル定義書
 
  https://drive.google.com/open?id=19fAOxtH7NL9xO2wN5FaWKcCw7V9eh-emoLCrT98fNYY
+ 
+ * テスト仕様書
+ 
+ https://drive.google.com/open?id=1jTZfh2pWODJvNXO4-o9sj8SDmtvbygBm
 
 ## Version
 
