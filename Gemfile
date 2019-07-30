@@ -75,6 +75,7 @@ gem 'font-awesome-sass'
 
 # install devise gem for login
 gem 'devise'
+gem 'jQuery-Validation-Engine-rails'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
