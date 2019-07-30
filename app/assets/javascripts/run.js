@@ -22,7 +22,6 @@ function runCode(){
             $.ajax({
                 url: "http://api.paiza.io/runners/get_details?api_key=guest&id=" + sessionId,
                 method: "GET",
-                crossDomain: true
             }).done(function(result){
                 if(result.status == "running" && retryCount++ < 10){
                     setTimeout(getResult, 1000);
