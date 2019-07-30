@@ -33,7 +33,7 @@ function runCode(){
                 $("#exit_code").text(result.exit_code);
                 $("#run_button").text("実行（Ctrl-Enter）").prop("disabled", false);
             }).fail(function(error){
-                alert("Request Failed:" + JSON.stringify(error));
+                alert("Request Failed:" + error);
                 $("#run_button").text("実行（Ctrl-Enter）").prop("disabled", false);
             });
         };
