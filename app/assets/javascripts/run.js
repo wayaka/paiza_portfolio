@@ -15,6 +15,7 @@ function runCode(){
             api_key: 'guest'
         },
     }).done(function(result){
+        alert("test");
         var sessionId = result.id;
         var retryCount = 0;
         var getResult = function(){
