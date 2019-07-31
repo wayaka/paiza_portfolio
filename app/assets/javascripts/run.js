@@ -22,7 +22,7 @@ function runCode(){
         var getResult = function(){
             console.log("getResult");
             $.ajax({
-                url: "http://api.paiza.io/runners/get_details?api_key=guest&id=" + sessionId,
+                url: "https://api.paiza.io/runners/get_details?api_key=guest&id=" + sessionId,
                 method: "GET",
             }).done(function(result){
                 if(result.status == "running" && retryCount++ < 10){
