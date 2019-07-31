@@ -39,7 +39,8 @@ function runCode(){
             });
         };
         getResult();
-    }).fail(function(error){
+    }).fail(function(xhr,error){
+        console.log(error);
         alert("Request Failed:" + error);
         $("#run_button").text("実行（Ctrl-Enter）").prop("disabled", false);
     });
