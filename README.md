@@ -66,6 +66,15 @@ https://run-code.herokuapp.com/
 * Git
 * GitHub
 
+## 対応端末
+
+　* PC
+ 
+## 対応ブラウザ
+
+ * Chrome
+ * Safari
+
 ## How To Use
 ### コード実行
 1. トップページの[Let's Try!]をクリック
