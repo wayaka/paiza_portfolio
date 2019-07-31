@@ -5,7 +5,7 @@ function runCode(){
     var source_code = aceEditor.getValue();
     var input = $("#input").val();
     $.ajax({
-        url: "http://api.paiza.io/runners/create",
+        url: "https://api.paiza.io/runners/create",
         type: "POST",
         data: {
             language: language,
