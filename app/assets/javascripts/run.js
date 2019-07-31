@@ -6,7 +6,7 @@ function runCode(){
     var input = $("#input").val();
     $.ajax({
         url: "http://api.paiza.io/runners/create",
-        method: "POST",
+        type: "POST",
         data: {
             language: language,
             source_code: source_code,
@@ -14,8 +14,8 @@ function runCode(){
             longpoll: false,
             api_key: 'guest'
         },
+
     }).done(function(result){
-        alert("test");
         var sessionId = result.id;
         var retryCount = 0;
         var getResult = function(){
