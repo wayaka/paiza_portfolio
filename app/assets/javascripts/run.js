@@ -16,6 +16,7 @@ function runCode(){
         },
 
     }).done(function(result){
+        alert(data);
         var sessionId = result.id;
         var retryCount = 0;
         var getResult = function(){
@@ -40,8 +41,8 @@ function runCode(){
         };
         getResult();
     }).fail(function(xhr,error){
-        console.log(error);
-        alert("Request Failed:" + error);
+        alert("エラー" + error);
+        // alert("Request Failed:" + error);
         $("#run_button").text("実行（Ctrl-Enter）").prop("disabled", false);
     });
 }
