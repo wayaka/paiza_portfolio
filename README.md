@@ -11,7 +11,7 @@
 
 https://run-code.herokuapp.com/
 
-テストユーザー：test1234
+テストユーザー：test1234@gmail.com
 
 テストPW：test1234
 
