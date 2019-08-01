@@ -10,6 +10,7 @@
   <ul class="navbar-nav py-5">
       <% if user_signed_in? %>
         <li class="nav-item active">
+        <%= link_to '新規コード', new_code_path, class: "btn btn-outline-primary d-block d-md-inline-block mb-2 mb-md-0 rounded-pill btn-lg mx-4" %>
         <%= link_to 'コード一覧', codes_path, class: "btn btn-outline-primary d-block d-md-inline-block mb-2 mb-md-0 rounded-pill btn-lg mx-4" %>
           <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "btn btn-outline-secondary d-block d-md-inline-block mb-2 mb-md-0 rounded-pill btn-lg mx-4" %>
         </li>
