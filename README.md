@@ -30,6 +30,10 @@ https://run-code.herokuapp.com/
  * テスト仕様書
  
  https://drive.google.com/open?id=1jTZfh2pWODJvNXO4-o9sj8SDmtvbygBm
+ 
+ * 操作説明書
+ 
+ https://drive.google.com/open?id=1stgCO-TJBA4Ma1viizZFml2ilvmKI-iNMKbA2k7j_8o
 
 ## Version
 
