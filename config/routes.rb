@@ -11,4 +11,6 @@ Rails.application.routes.draw do
 
   get '/question', to: 'codes#select_question', as: 'select_question'
 
+  get '/usage', to: 'static_pages#usage', as: 'usage'
+
 end
