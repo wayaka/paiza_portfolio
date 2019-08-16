@@ -28,7 +28,6 @@ function setEditorLanguage(language){
     };
     var mode = languageToMode[language];
     aceEditor.getSession().setMode("ace/mode/" + mode);
-
 }
 $("#language").val("ruby");
 setEditorLanguage("ruby");
@@ -48,7 +47,7 @@ $('#new_code').click(function() {
             'source': source_code,
          },
         success: function( data ) {
-            // console.log( data );
+
         }
         , error: function( data ) {
             console.log( data );
@@ -62,8 +61,6 @@ $('#update_code').click(function() {
     var param = url.match(/codes\/\d+/)[0].match(/\d+/)[0];
     var language = $("#language").val();
     var source_code = aceEditor.getValue();
-    
-    
     $.ajax( {
           type: 'POST',
           beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
@@ -73,7 +70,7 @@ $('#update_code').click(function() {
             'source': source_code,
          },
         success: function( data ) {
-            // console.log( data );
+
         }
         , error: function( data ) {
             console.log( data );
@@ -81,6 +78,13 @@ $('#update_code').click(function() {
     } );
     return false; // submitしたらajaxを待つことなく画面遷移するため。
 } );
+
+// for quiz
+$(function() {
+    $('#question_btn').click(function() {        
+        $('.balloon2-left').toggle();
+    });
+});
 
 // when update code
 if(location.href.indexOf('edit') !== -1){

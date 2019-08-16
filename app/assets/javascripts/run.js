@@ -43,4 +43,3 @@ function runCode(){
         $("#run_button").text("実行（Ctrl-Enter）").prop("disabled", false);
     });
 }
-
