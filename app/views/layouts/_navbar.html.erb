@@ -1,54 +1,31 @@
 <nav class="navbar navbar-expand-lg navbar-light pt-3">
-  <%= image_tag 'pc.gif', class: "logo ml-5" %>
+    <%= image_tag 'pc.gif', class: "logo ml-5" %>
     <ul class="navbar-nav pt-5 ml-1 mr-auto">
-    <li class="nav-item active">
-    <%= link_to "RunCode", root_path, class: "navbar-brand font-weight-bold logo-text" %>
-    </li>
-  </ul>
-  <ul class="navbar-nav py-5">
-      <li class="nav-item active mx-lg-1 mt-sm-1">
-      <%= link_to '新規コード', new_code_path, class: "btn btn-outline-primary d-block d-md-inline-block mb-2 mb-md-0 rounded-pill btn-lg" %>
-      </li>
-      <% if user_signed_in? %>
-        <li class="nav-item active mx-lg-1 mt-sm-1">
-        <%= link_to 'コード一覧', codes_path, class: "btn btn-outline-primary d-block d-md-inline-block mb-2 mb-md-0 rounded-pill btn-lg" %>
-          </li>
-          <li class="nav-item active mx-lg-1 mt-sm-1">
-          <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "btn btn-outline-secondary d-block d-md-inline-block mb-2 mb-md-0 rounded-pill btn-lg" %>
+        <li class="nav-item active">
+            <%= link_to "RunCode", root_path, class: "navbar-brand font-weight-bold logo-text" %>
         </li>
-      <% else %>
+    </ul>
+    <ul class="navbar-nav py-5">
         <li class="nav-item active mx-lg-1 mt-sm-1">
-          <a class="btn btn-outline-secondary d-block d-md-inline-block mb-2 mb-md-0 rounded-pill btn-lg" data-toggle="modal" data-target="#signUpModal">Sign Up</a>
+            <%= link_to '新規コード', new_code_path, class: "btn btn-outline-primary d-block d-md-inline-block mb-2 mb-md-0 rounded-pill btn-lg" %>
         </li>
+        <% if user_signed_in? %>
+            <li class="nav-item active mx-lg-1 mt-sm-1">
+                <%= link_to 'コード一覧', codes_path, class: "btn btn-outline-primary d-block d-md-inline-block mb-2 mb-md-0 rounded-pill btn-lg" %>
+            </li>
+            <li class="nav-item active mx-lg-1 mt-sm-1">
+                <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "btn btn-outline-secondary d-block d-md-inline-block mb-2 mb-md-0 rounded-pill btn-lg" %>
+            </li>
+        <% else %>
+            <li class="nav-item active mx-lg-1 mt-sm-1">
+                <a class="btn btn-outline-secondary d-block d-md-inline-block mb-2 mb-md-0 rounded-pill btn-lg" data-toggle="modal" data-target="#signUpModal">Sign Up</a>
+            </li>
+            <li class="nav-item active mx-lg-1 mt-sm-1">
+                <a class="btn btn-outline-secondary d-block d-md-inline-block mb-2 mb-md-0 rounded-pill btn-lg" data-toggle="modal" data-target="#logInModal">Log In</a>
+            </li>
+        <% end %>
         <li class="nav-item active mx-lg-1 mt-sm-1">
-          <a class="btn btn-outline-secondary d-block d-md-inline-block mb-2 mb-md-0 rounded-pill btn-lg" data-toggle="modal" data-target="#logInModal">Log In</a>
+            <%= link_to "使い方", usage_path, class: "btn btn-outline-primary d-block d-md-inline-block mb-2 mb-md-0 rounded-pill btn-lg" %>
         </li>
-      <% end %>
-      <li class="nav-item active mx-lg-1 mt-sm-1">
-        <%= link_to "使い方", usage_path, class: "btn btn-outline-primary d-block d-md-inline-block mb-2 mb-md-0 rounded-pill btn-lg" %>
-      </li>
     </ul>
 </nav>
- <style>
-   .logo {width: 10%; }
-   .logo-text { font-size: 200% }
-
-   li {
-  display: -webkit-box; /* safari, Chrome */
-  display: -moz-box;    /* Firefox */
-  display: -o-box;      /* Opera */
-  display: -ms-box;     /* IE */
-  display: box;         /* ベンダープレフィックスなし */
-
-  -webkit-box-align: center; /* safari, Chrome */
-  -moz-box-align: center;    /* Firefox */
-  -o-box-align: center;      /* Opera */
-  -ms-box-align: center;     /* IE */
-  box-align: center;         /* ベンダープレフィックスなし */
-   }
-
-   a {
-  display: block;
-}
-
- </style>

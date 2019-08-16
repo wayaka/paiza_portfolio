@@ -2,7 +2,6 @@ class CodesController < ApplicationController
   protect_from_forgery
   before_action :set_code, only: [:edit, :update_code, :destroy]
   before_action :set_question
-  # before_action :authenticate_user!, [:index, :create, :update_code, :destroy]
 
   def index
     @codes = Code.all
@@ -14,13 +13,9 @@ class CodesController < ApplicationController
   end
 
   def new
-
   end
 
   def create
- 
-
-
     @language = Language.find_by(code: params[:language])
     @code = current_user.codes.build(source: params[:source], language_id: @language.id)
 
