@@ -79,6 +79,7 @@ gem 'jQuery-Validation-Engine-rails'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
+gem "omniauth-rails_csrf_protection"
 
 # use JavaScript and ruby association
 gem 'gon'
